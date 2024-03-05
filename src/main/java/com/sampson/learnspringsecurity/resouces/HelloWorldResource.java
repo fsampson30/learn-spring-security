@@ -1,4 +1,4 @@
-package com.sampson.learnspringsecurity;
+package com.sampson.learnspringsecurity.resouces;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
