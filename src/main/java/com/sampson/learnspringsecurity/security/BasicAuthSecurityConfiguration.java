@@ -42,7 +42,7 @@ public class BasicAuthSecurityConfiguration {
     @Bean
     public UserDetailsService userDetailsService(DataSource dataSource) {
         var user = User.withUsername("flavio").password("{noop}dummy").roles("USER").build();
-        var admin = User.withUsername("admin").password("{noop}dummy").roles("ADMIN").build();
+        var admin = User.withUsername("admin").password("{noop}dummy").roles("ADMIN","USER").build();
 
         JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
         jdbcUserDetailsManager.createUser(user);
